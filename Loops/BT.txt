@@ -1,0 +1,92 @@
+https://docs.google.com/document/d/1ESB8fY-5GSJi65RTXlDRnXS7UQlVXVzip07nS6JCVIc/edit?tab=t.0#heading=h.28tx88f7t32x
+
+BT1: Nhập số n và in các số từ n đến 100 và tính tôổng các số đó:
+# Input: n = 90
+# Output: 90 92 94 96 98 100 (90 -> 100, số nào chẵn in ra)
+n = int(input("Nhập số tự nhiên n: "))
+# [a,b)
+# Bieesn có khả năng tăng: i 90 -> 100
+# Tính tổng: sum = 0
+sum = 0
+for i in range(n, 101):
+    if i % 2 == 0:
+        print(i, end =" ") # Cần in ra nhiều số
+        sum +=i
+# In ra 1 lần để hiển thị sum
+print()
+print(sum)
+
+Bài 4:
+## Input: A = 1 ->  B = 50  X = 5
+# Output: 10
+## count = 0 -> Mỗi khi thỏa mãn điều kiện -> count +=1
+A = int(input("Input A: "))
+B = int(input("Input B: "))
+X = int(input("Input X: "))
+count = 0
+
+for i in range(A,B+1):
+    if i % X == 0:
+        count += 1
+print(count)
+
+## Exercise 5: Calculate the Product of Numbers from 1 to M
+# Input: M = 5
+# Output: 1 * 2 * 3 * 4 * 5 = 120
+#sum = 0 -> sum +=i
+mutiply = 1
+M = int(input("Input M: "))
+for i in range(1,M +1):
+    mutiply *=i
+print(mutiply)
+
+"""
+Exercise 14: Guess the Number Game
+Write a program to simulate a number guessing game:
+The program randomly selects a number between 1 and 100.
+The user repeatedly enters guesses.
+Use a while loop to keep asking for input until the user guesses the correct number.
+The program should provide hints like "Too high!" or "Too low!" after each guess.
+Extension: Count the number of guesses and display it when the user wins.
+"""
+## Input: number  -> [1,100] -> Nếu nhập quá thì in ra lỗi và bắt nhập lại -> while(lặp khi nào, lặp khi đúng)
+## Input: số chương trình X = 65
+## number = 50 -> Too low!
+## number = 60 -> Too low!
+## number = 70 -> Too high!
+## number = 65 = X -> You win! Count = 4 -> chương trình sẽ thoát nếu đoán đúng:
+# Khởi tạo 1 biến boolean (1 cái cờ) , break để thoát vòng lặp
+count = 0
+X = int(input("Input number: ")) ## X = 65
+isCheck = True # bool
+while isCheck:
+    number = int(input("Nhập số người dùng đoán: "))
+    if number < X:
+        print("Too low!")
+        count += 1
+    elif number > X:
+        print("Too high!")
+        count += 1
+    else:
+        print("Bạn đã đoán đúng, kết thúc chương trình!")
+        count += 1
+        isCheck = False
+print(count)
+
+# Exercise 9: Smallest Number Divisible by 3, 5, and 7 và laf số > 0
+# Output: 105
+
+n = 1
+while True:
+    if n % 3 == 0 and n % 5 == 0 and n % 7 == 0:
+        break
+    n += 1
+print(f"The smallest positive number divisible by 3, 5, and 7 is: {n}")
+
+# Kiểm tra 1 số có phải số nguyên tố hay không (số nguyên tố là số chỉ chia hết cho 1 và chính nó)
+Input: 13
+Output: 13 là số nguyên tố
+
+Input: 8
+Output: 8 không phải số nguyên tố
+Vì 8 chia hết cho 2 4
