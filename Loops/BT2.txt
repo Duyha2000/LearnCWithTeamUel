@@ -1,0 +1,13 @@
+# Bài tập: Nhập vào 1 số và in ra số đảo ngược
+-> Input: 8539
+-> Output: 9358 ( %10, //10 và vòng lặp while)
+
+## Bài tập 2: Nhập vào 1 số và tính tổng các chữ số của nó: 8539
+-> Output: 8 + 5 + 3 + 9 =...
+
+## Bài tập 3: Nhập vào 1 số và đếm số lượng các chữ số chẵn của nó: 853922
+-> Output: 3 ( 8 - 2 - 2 )
+
+# Bài tập 4: Nhập số giây và in ra số giờ , phút , giây
+## Input: 3905s
+## Output: 1 giờ 5 phút 5 giây ( % // - 60)
