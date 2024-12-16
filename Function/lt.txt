@@ -1,0 +1,77 @@
+## Khái niệm function:
+
+# In ra các số từ 1 -> 7:
+
+
+# Function: 1 khối block code, khi gọi đến hàm thì đoạn code sẽ được thực thi:
+# Cú pháp: def + tên hàm(paremeter):
+#               return
+
+# def printNumber1To7():
+#     for i in range(1, 8):
+#         print(i, end=" ")
+#
+# # Gọi hàm:
+# printNumber1To7()
+#
+# printNumber1To7()
+#
+# printNumber1To7()
+# # Tham số: là cái giá trị có khả năng thay đổi (những giá trị người dùng input)
+# # 1 function để xử lý in các số từ 1 đến n:
+# def printNumber(n):
+#     for i in range(1, n+1):
+#         print(i, end=" ")
+# # Đối số - function printNumber có 1 tham số là n -> cần truyền 1 đối số vào
+# print()
+# printNumber(5)
+# print()
+# printNumber(7)
+
+## Function: có return và không return:
+## Hàm in ra kết quả thì không cần dùng return -> vì nó không trả về gì hết (void)
+## Gán giá trị, thay đổi giá trị của biến gốc
+
+
+# a = 3 - b = 4
+## Viết 1 function để tăng a lên 1 đơn vị khi gọi đến:
+a = 3 ## a có địa chỉ là xx1234 - - - - - - -- - - - - [sao chép giá trị biến a =3 vào vùng nhớ này] <- xx6789
+## Tham trị:
+def increament(a):
+    a += 1 ##   xx6789
+    print(a) ## 4
+
+increament(a)
+print(a)
+## Hàm tính toán (tổng , hiệu, tích , nhân) -> return + kiểu trả về tương ứng
+## Tính tổng các số từ 1 đến 5 dùng function:
+# def sum():
+#     sum = 0
+#     for i in range(1,6):
+#         sum +=i
+#     re
+#     turn sum
+#
+# print(sum())
+
+
+## Boolean: kiểm tra 1 số là số chẵn hay số lẻ:
+## Kiểm tra chẵn hay không (tính đúng sai -> boolean)
+def isOddNumber(n : int) -> bool:
+    if n % 2 == 0:
+        return True
+    return False
+
+n = 6
+if isOddNumber(n):
+    print("So chan")
+else:
+    print("So le")
+
+def sum(a : int , b :int ) -> int:
+    sum = 0
+    for i in range(a,b+1):
+        sum +=i
+    return sum
+
+## Không có return (hàm in), có return (tính toán) -> trả về 1 số, boolean ( trả về true - false) -> gọi hàm bằng if else
