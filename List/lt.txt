@@ -1,0 +1,120 @@
+# List: danh sách: lưu trữ các kỉu dữ liệu khác nhau
+# lst = [1,"3",[1,2,3]]
+
+# array: lưu trữ các biến trong cùng kiểu dữ liệu []
+# Chỉ số: index trong list:
+"""
+lst2 = [1,3,5,7,9] # Chỉ số bắt đầu từ 0:
+#            -2 -1
+#       0 1 2 3 4
+# Lấy ra số 1:
+print(lst2[0]) # 1
+print(lst2[3]) # 7
+# index: phần từ đầu là 0, phần tử cuối là 4
+# Lấy ra kích thước size list: len
+print(len(lst2)) # 5
+print(lst2[-1]) # 9
+print(lst2[len(lst2)-1]) # 9
+# Update: [1,3,3,7,9]
+# Chuyển số 5 thành số 3:
+lst2[2] = 3
+print(lst2) # [1, 3, 3, 7, 9]
+
+# Add element: append, extend
+# Append: thêm phần tử vào cuối list
+# lst2.append([1,2,3,4,5]) # Thêm 1 object vào cuối list (list, 1 số)
+lst2.append(2)
+print(lst2) # [1, 3, ... , 3, 7, 9, [1, 2, 3, 4, 5], 2]
+# Insert: index, value
+lst2.insert(2,5)
+print(lst2) # [1, 3, 5, 3, 7, 9, [1, 2, 3, 4, 5], 2]
+
+# Xóa phần tử trong list: remove(), pop()
+# pop():
+#lst2.pop() # Không truyền tham số -> xóa đi phần tử cuối cùng trong list
+lst2.pop(2) # Khi truyền tham số (index) # [1, 3, 3, 7, 9, [1, 2, 3, 4, 5], 2]
+
+print(lst2)
+# remove: xóa đi giá trị:
+lst2.remove(7)
+print(lst2) # [1, 3, 3, 9, [1, 2, 3, 4, 5], 2]
+# sort, reverse:
+lst2.sort()
+print(lst2) # Sắp xếp tăng dần [1, 2, 3, 3, 9]
+lst2.sort(reverse=True) # Sắp xếp giảm dần: thêm reverse=True
+print(lst2) # [9, 3, 3, 2, 1]
+# min, max, count, sum
+
+# Khởi tạo 1 list rỗng, sau đó thêm 5 phần tử số nguyên vào list:
+"""
+"""
+lst.append(int(input()))
+lst.append(int(input()))
+lst.append(int(input()))
+lst.append(int(input()))
+lst.append(int(input()))
+"""
+# For:
+"""
+lst = []
+for i in range(5):
+    lst.append(int(input()))
+"""
+#(lst) # [5, 3, 10, 20, 30]
+# Duyệt các phần tử trong list: tính toán các phần tử trong list, đếm số lượng trong list thỏa mãn điều kiện:
+
+# Tính tổng các phần tử chẵn trong lst:
+# for i in range (sử dụng làm những bài toán liên quan vị trí)
+# sum = lst[0] + lst[1] + lst[2] + lst[3] + lst[4]
+#sum = 0
+# i đại diện cho index -> 0 -> 4 0 1 2 3 4
+
+# 1 3 5 6 8 <- value: giá trị
+# 0 1 2 3 4 <- for i in range lấy chỉ số, không lấy được giá trị
+
+#for i in range(0, len(lst)):
+#    sum += lst[i]
+#print(sum) # 25
+"""
+
+
+
+# for i in list (xử lý tṛc tiếp các số) for each: lấy ra từng số trong list
+"""
+#for i in lst:
+#   print(i, end="")
+#   sum += i
+#print(sum)
+# Cho 1 danh sách có 5 phần tử là [1,3,5,7,9,9,5,9]
+# Nhập vào 1 số và kiểm tra số đấy nằm ở "vị trí" nào trong list, nếu có in ra vị trí, nếu không in ra -1
+
+# Nhập số 7: 3
+# Nhập số 15: -1 "position, index"
+#lst3 = [1,10,5,7,9,9,5,9]
+#                     -> 3
+# X = int(input()) # 10
+# sum = 0 -> sum +=i
+# tich = 1 -> tich *=i
+# count = 0 -> count += 1
+# pos = -1 -> pos = i
+"""
+pos = -1
+for i in range(len(lst3)): -> index, position
+    if X == lst3[i]:
+        pos = i # 1
+        break
+print(pos) # pos = 1
+"""
+# Nhập 1 số X, đếm số lần xuất hiện của phần tử trong list:
+# Nhập X = 9 -> 3
+"""
+count = 0
+for i in lst3:
+    if i == X:
+        count += 1
+print(count)
+"""
+# max, min, count, sum
+# split, join
+
+# Slicing:
