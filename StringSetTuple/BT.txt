@@ -1,0 +1,161 @@
+Bài tập 1: Đếm số lần xuất hiện của ký tự c trong chuỗi s
+Đề bài
+Cho xâu (chuỗi) s và một ký tự c được nhập từ bàn phím.
+Yêu cầu: In ra số lần xuất hiện của ký tự c trong xâu s.
+Ví dụ
+Nhập:
+makefile
+Copy code
+s = "Codelearn"
+c = 'e'
+
+
+Xuất:
+Copy code
+2
+Giải thích: Ký tự 'e' trong "Codelearn" xuất hiện tại chỉ số 3 và chỉ số 5, tổng cộng 2 lần.
+Gợi ý
+Dùng vòng lặp đếm thủ công, hoặc dùng phương thức s.count(c).
+Sau đó in kết quả.
+
+Bài tập 2: Tìm vị trí đầu tiên của ký tự c trong chuỗi s
+Đề bài
+Cho xâu s và ký tự c được nhập từ bàn phím.
+Yêu cầu: In ra vị trí đầu tiên (chỉ số index) mà ký tự c xuất hiện trong s. Nếu ký tự c không tồn tại, in -1.
+Ví dụ 1
+Nhập:
+makefile
+Copy code
+s = "codelearn"
+c = 'o'
+
+
+Xuất:
+Copy code
+1
+Giải thích: s[1] là 'o', nên vị trí đầu tiên ký tự 'o' xuất hiện là 1.
+Ví dụ 2
+Nhập:
+
+s = "codewar"
+c = 'z'
+
+
+Xuất:
+diff
+Copy code
+-1
+Giải thích: Ký tự 'z' không có trong "codewar".
+Gợi ý
+Có thể duyệt for i in range(len(s)): và kiểm tra if s[i] == c: để lấy i rồi dừng luôn.
+Hoặc dùng phương thức s.find(c) (trả về -1 nếu không thấy).
+
+Bài tập 3: Thay tất cả ký tự '3' thành 'e' trong chuỗi s
+Đề bài
+Cho một xâu s được nhập từ bàn phím.
+Yêu cầu: Chuyển tất cả các ký tự '3' trong xâu s thành ký tự 'e', sau đó in xâu kết quả ra màn hình.
+Ví dụ
+Nhập:
+makefile
+Copy code
+s = "cod3l3arn"
+
+
+Xuất:
+Copy code
+codelearn
+Giải thích: Tất cả '3' đã được thay bằng 'e'.
+Gợi ý
+Dùng phương thức s.replace('3', 'e') để thay trực tiếp.
+Hoặc có thể duyệt qua chuỗi bằng vòng lặp, rồi xây dựng chuỗi mới.
+
+Bài tập 4: Kiểm tra chuỗi có phải là palindrome hay không
+Đề bài
+Cho một xâu s. Kiểm tra xem khi đảo ngược xâu s (reverse), ta có thu được chính s hay không.
+Nếu có, in ra màn hình "YES", ngược lại in "NO".
+Ví dụ
+s = "madam"
+Đảo ngược: "madam" (giống y hệt chuỗi gốc)
+Kết quả: in "YES".
+
+s = "code"
+Đảo ngược: "edoc" (khác chuỗi gốc)
+Kết quả: in "NO".
+
+---
+Bài tập Set:
+1. Bài tập 1: Loại bỏ phần tử trùng lặp và in kết quả
+Đề bài:
+Bạn được nhập một danh sách các số nguyên từ bàn phím (có thể trùng lặp).
+Yêu cầu:
+Chuyển danh sách này sang một Set để loại bỏ trùng lặp.
+In ra các phần tử trong Set.
+In ra độ dài của Set (để biết có bao nhiêu phần tử duy nhất).
+Gợi ý
+Nhập danh sách số nguyên (ví dụ nhập 1 dòng rồi tách thành list).
+Chuyển list sang Set (chỉ cần set(lst)).
+In Set và in ra độ dài (len(...)) của Set.
+Ví dụ:
+
+Input:  1 2 2 3 5 1 2 7
+Output: Set = {1, 2, 3, 5, 7}
+        Length = 5
+
+2. Bài tập 2: Quản lý từ vựng (bộ từ vựng duy nhất)
+Đề bài
+Bạn muốn lưu lại các từ (word) mà người dùng nhập vào (có thể trùng lặp).
+Yêu cầu:
+Tạo một Set rỗng ban đầu, gọi là vocab.
+Người dùng được nhập nhiều từ (theo từng dòng hoặc theo chuỗi).
+Mỗi khi nhập 1 từ, hãy thêm từ đó vào vocab.
+Khi người dùng nhập từ "STOP" thì dừng lại.
+In ra tất cả các từ duy nhất đã nhập, kèm số lượng.
+Gợi ý
+Tạo vocab = set().
+Vòng lặp:
+Nhập 1 từ word.
+Nếu word == "STOP" thì break.
+Ngược lại, vocab.add(word).
+Cuối cùng in vocab và len(vocab).
+Ví dụ (minh họa):
+
+Nhập:
+code
+code
+learn
+python
+code
+STOP
+
+vocab = {"code", "learn", "python"}
+Số lượng: 3
+
+3. Bài tập 3: Xóa phần tử khỏi Set
+Đề bài
+Cho sẵn (hoặc nhập vào) một Set các ký tự, ví dụ { 'a', 'b', 'c', 'd', 'e' }.
+Yêu cầu:
+Nhập từ bàn phím một ký tự x.
+Nếu ký tự x có trong Set, hãy dùng phương thức remove(x) để xóa nó và in ra Set sau khi xóa.
+Nếu x không có trong Set, in ra thông báo 'Phần tử không tồn tại trong Set'.
+Sau đó, sử dụng pop() để xóa ngẫu nhiên một phần tử khỏi Set (nếu còn phần tử) và in ra phần tử vừa bị xóa, kèm trạng thái Set mới.
+
+Gợi ý:
+Khởi tạo Set, ví dụ: my_set = {'a', 'b', 'c', 'd', 'e'}.
+Nhập ký tự x.
+Kiểm tra bằng lệnh if x in my_set: ... else: ....
+Dùng remove(x) để xóa 1 phần tử cụ thể (khác với discard(x) không báo lỗi nếu không tồn tại).
+Dùng pop() để xóa 1 phần tử ngẫu nhiên, xem phần tử nào bị xóa, in kết quả.
+
+Ví dụ:
+
+my_set = {'a', 'b', 'c', 'd', 'e'}
+Nhập x = 'c'
+
+- 'c' có trong set => xóa 'c'
+my_set = {'a', 'b', 'd', 'e'}
+
+- pop() => ví dụ xóa 'a' (ngẫu nhiên)
+my_set = {'b', 'd', 'e'}
+Phần tử bị xóa: 'a'
+
+
