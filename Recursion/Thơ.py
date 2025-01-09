@@ -121,14 +121,107 @@ print(f"Total sum is: {sum_list(list)}")"""
 
 """Exercise 7: Count the Number of Digits in a Number
 input 12345 --> output : 5
-"""
-
 
 def num_of_digits(n):
-    count = 0
-    if len(n) == 0:
-        return 0
-    return
+    if 0 <= n < 10:
+        return 1
+    return 1 + num_of_digits(n // 10)
+
+n = int(input("Enter a positive int: "))
+print(f"Number of digits is: {num_of_digits(n)}") """
+
+"""
+Exercise 8: Determine the Largest Digit
+Write a program that takes an integer `n` as input and determines the largest digit in `n` 
+using recursion. Assume that `n` is a non-negative integer.
+
+Input: 29483 <-
+Output: 9
+"""
+# n = 29483
+"""
+while True:
+
+    # B1: Lấy chữ số hàng đơn vị: 3, cho giá trị này là max, so sánh với từng chữ số
+    # 29483 -> làm thế nào lấy ra được số 3: 29483 % 10 = 3 -> max (max = 3)
+    # Cầm max đi so sánh với chữ số hàng chục, trăm, nghìn ,chục nghìn -> số nào > max hiện tại thì số đó là max
+    max = n % 10  # 3
+
+    if n == 0:
+        break
+    # list: [1 3 5 8 4]
+    #              ->
+    # Gán phần tử lớn nhất max cho phần tử đầu tiên list[0]
+    # Đi so sánh với các phần tử khác trong list, phần tử nào lớn hơn thì nó là max
+nStr = str(n)  # "29483"
+maxNum = nStr[0]
+for c in nStr:
+    # c = '2' '9' '4' '8' '3'
+    if maxNum < c:
+        maxNum = c
+print(maxNum)
+
+
+def largest_digit(n):
+    if n < 10:
+        return n
+
+    the_rest = largest_digit(n // 10)
+    return max(n % 10, the_rest)
 
 
 n = int(input("Enter a positive int: "))
+print(f"The largest digit is: {largest_digit(n)}")"""
+
+"""
+Exercise 9: Enter a Number N and Calculate the Sum of Its Digits
+Write a program that takes an integer `N` as input and calculates the sum of its digits using recursion.
+
+Input:1234
+Output: 10
+
+def sum_digits(n):
+    if n < 10:
+        return n
+    return n % 10 + sum_digits(n // 10)
+
+n = int(input("Enter a number: "))
+print(f"Sum of digits = {sum_digits(n)}")"""
+
+"""
+Exercise 11: Calculate the Sum of Consecutive Natural Squares
+Write a program that takes an integer `n` as input and calculates the sum 
+of the squares of the first `n` natural numbers using recursion.
+
+Input:3
+Process: 3^2 + 2^2 + 1^2 
+Output:14
+
+def sum_cs(n):
+    if n == 1:
+        return n
+    return n ** 2 + sum_cs(n - 1)
+
+n = int(input("Enter a number: "))
+print(f"Sum of consecutive squares = {sum_cs(n)}")"""
+
+"""
+Exercise 13: Print the Array from Right to Left
+
+Write a program that takes an array of `n` integers as input and prints the elements of the array 
+from right to left using recursion.
+Input: 5
+1 2 3 4 5
+Output: 5 4 3 2 1
+"""
+
+
+def rtol(n):
+    if n == 0:
+        return
+    rtol(n - 1)
+    print(n, end=' ')
+
+
+n = int(input("Enter a number: "))
+rtol(n)
